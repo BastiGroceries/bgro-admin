@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Kaiadmin - Bootstrap 5 Admin Dashboard</title>
+    <title>Admin Dashboard</title>
     <meta
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
       name="viewport"
@@ -1575,6 +1575,20 @@
     window.location.href = "login.html";
   }
 </script>
+
+   <script>
+        // Check if the user is logged in by checking localStorage
+        if (!localStorage.getItem("loggedIn")) {
+            // Redirect to login page if not logged in
+            window.location.href = "login.html";
+        }
+
+        // Function to log out the user
+        function logout() {
+            localStorage.removeItem("loggedIn");
+            window.location.href = "login.html";
+        }
+    </script>
 
 
 
