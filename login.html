@@ -65,7 +65,7 @@
 
     <script>
         // Base64 encoded password for "hardiksri@123"
-        const correctPassword = atob("ZXhhbXBsZQ==");
+        const correctPassword = atob("aGFyZGlrc3JpQDEyMw==");
 
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault();
@@ -74,13 +74,13 @@
             const password = document.getElementById("password").value;
             const errorMessage = document.getElementById("errorMessage");
 
-            // Check if the password is correct
+            // Check if the password is correct (username can be anything)
             if (password === correctPassword) {
                 alert("Login successful!");
                 errorMessage.textContent = ""; // Clear error message if login is successful
                 // Proceed with redirection or further steps here
             } else {
-                errorMessage.textContent = "Incorrect username or password!";
+                errorMessage.textContent = "Incorrect password!";
             }
         });
     </script>
